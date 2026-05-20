@@ -76,8 +76,9 @@ Once started, open your browser and navigate to **`http://localhost:8000`** to i
 ## ☁️ Deployment
 
 This project is fully configured for 1-click deployment on **Render.com**.
+Here is the URL : [https://anime-recommender-x0t9.onrender.com](https://anime-recommender-x0t9.onrender.com/)
 
-1. Create a free account on [Render.com](https://render.com/).
+1. To deploy yours you can create a free account on [Render.com](https://render.com/).
 2. Click **New** -> **Blueprint**.
 3. Connect your GitHub account and select this repository.
 4. Render will read the `render.yaml` configuration file and deploy the web service automatically!
