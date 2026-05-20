@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Recommender - Evolved</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header class="hero">
+        <div class="glass-container header-content">
+            <h1><span class="highlight">Anime</span> Recommender</h1>
+            <p>Discover your next favorite anime using our evolved content-based recommendation engine powered by TF-IDF & Cosine Similarity.</p>
+            
+            <div class="stats-container" id="statsContainer">
+                <!-- Stats will be loaded here via JS -->
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section glass-container">
+            <h2>Find Recommendations</h2>
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search for an anime (e.g. Bleach, Naruto)..." autocomplete="off">
+                <button id="searchBtn" class="primary-btn">Recommend</button>
+                <div id="autocompleteResults" class="autocomplete-dropdown hidden"></div>
+            </div>
+            
+            <div class="controls">
+                <div class="model-selector">
+                    <label for="modelSelect">Engine:</label>
+                    <select id="modelSelect" class="styled-select">
+                        <option value="hybrid">🚀 XGBoost (Advanced Hybrid)</option>
+                        <option value="content">🤖 TF-IDF (Content-Based)</option>
+                        <option value="collaborative">👥 SVD (Collaborative Filtering)</option>
+                    </select>
+                </div>
+                
+                <label class="toggle-container">
+                    <input type="checkbox" id="sortRatingToggle">
+                    <span class="checkmark"></span>
+                    Sort by Highest Rating
+                </label>
+            </div>
+        </section>
+
+        <section id="loadingSection" class="hidden">
+            <div class="loader"></div>
+            <p>Analyzing anime database...</p>
+        </section>
+
+        <section id="resultsSection" class="results-grid hidden">
+            <!-- Recommendation cards will be injected here -->
+        </section>
+        
+        <section id="errorSection" class="error-message hidden">
+            <!-- Errors will be shown here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with <i class="fas fa-heart"></i> using FastAPI & Modern Web Tech</p>
+    </footer>
+
+    <script src="static/app.js"></script>
+</body>
+</html>

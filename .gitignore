@@ -1,0 +1,26 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Massive Datasets (Too large for GitHub)
+# (anime.csv is small enough to be tracked, but rating files are huge)
+rating.csv
+rating.zip
+
+# IDEs
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
